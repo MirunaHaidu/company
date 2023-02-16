@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+  <meta charset="UTF-8">
+  <title>Login page</title>
+</head>
+
+<body>
+<form th:action="@{/welcome}" th:object="${welcomeForm}" method="post">
+  <label for="name">name</label>
+  <input type="text" id="name" name="name" autofocus="autofocus">
+  <br>
+  <label for="gdprConsent">gdprConsent</label>
+  <input type="checkbox" id="gdprConsent" name="gdprConsent" autofocus="autofocus">
+  <br>
+  <input type="submit" value="submit">
+</form>
+<br>
+
+<p th:text="${errorMessage}"/>
+</body>
+</html>

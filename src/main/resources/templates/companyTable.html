@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Table</title>
+</head>
+
+<body>
+<h1>Company Table</h1>
+<table style="text-align: center; justify-content: center" border="1">
+    <thead style="font-size: x-large">
+    <tr>
+        <td style="font-weight: bold">Id</td>
+        <td style="font-weight: bold">Name</td>
+        <td style="font-weight: bold">Registration number</td>
+        <td style="font-weight: bold">Address</td>
+        <td style="font-weight: bold">Phone number</td>
+        <td style="font-weight: bold">Email</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="company: ${companyList}">
+        <td th:text="${company.id}"></td>
+        <td th:text="${company.name}"></td>
+        <td th:text="${company.registrationNumber}"></td>
+        <td th:text="${company.address}"></td>
+        <td th:text="${company.phoneNumber}"></td>
+        <td th:text="${company.email}"></td>
+    </tr>
+    </tbody>
+
+</table>
+</body>
+</html>
